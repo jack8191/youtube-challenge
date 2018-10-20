@@ -28,8 +28,8 @@ function renderResult() {
 
 }
 
-function displayYoutubeSearchData() {
-    const results = items.map((items, _index) => renderResult(items));
+function displayYoutubeSearchData(data) {
+    const results = data.snippet.map((snippet, index) => renderResult(items));
     $('.js-search-results').html(results);
   }
 
