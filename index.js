@@ -9,7 +9,7 @@ function getDataFromApi(searchTerm, callback) {
         part: 'snippet',
         key: 'AIzaSyCcFpj2Cb42RpVtN6rpE5K2jH2N2wTgeKI',
         maxResults: 25,
-        q: searchTerm,
+        q: `${searchTerm} in:snippet`,
         type:'video'
     };
   
