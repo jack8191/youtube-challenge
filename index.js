@@ -13,9 +13,7 @@ function getDataFromApi(searchTerm, callback) {
         q: `${searchTerm} in:name`,
         type:'video'
     };
-  
     $.getJSON(url, params, callback);
-
 }
 
 
@@ -23,9 +21,7 @@ function getDataFromApi(searchTerm, callback) {
 function renderResult(result) {
     return `
     <div class="js-search-results">
-
         <img src="${result.snippet.thumbnails.medium.url}" alt="A youtube Thumbnail> 
-       
     </div>`
 
 }
