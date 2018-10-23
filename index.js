@@ -3,13 +3,14 @@
 //we need a function to render the result to the DOM
 
 //obtain data with search word from API
+
 function getDataFromApi(searchTerm, callback) {
     let url = 'https://www.googleapis.com/youtube/v3/search';
     let params = {
         part: 'snippet',
         key: 'AIzaSyCcFpj2Cb42RpVtN6rpE5K2jH2N2wTgeKI',
         maxResults: 25,
-        q: `${searchTerm} in:snippet`,
+        q: `${searchTerm} in:name`,
         type:'video'
     };
   
@@ -19,17 +20,17 @@ function getDataFromApi(searchTerm, callback) {
 
 
 //Spit result into HTML
-function renderResult() {
+function renderResult(result) {
     return `
     <div class="js-search-results">
-        <img src="${items.snippet.thumbnails.medium.url}"> 
+        <img src="${result}"> 
     </div>
     `;
 
 }
 
 function displayYoutubeSearchData(data) {
-    const results = data.snippet.map((snippet, index) => renderResult(items));
+    const results = data.items.map((item, index) => renderResult(item));
     $('.js-search-results').html(results);
   }
 
