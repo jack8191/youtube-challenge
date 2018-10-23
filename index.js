@@ -21,7 +21,7 @@ function getDataFromApi(searchTerm, callback) {
 function renderResult(result) {
     return `
     <div class="js-search-results">
-        <img src="${result.snippet.thumbnails.medium.url}" alt="A youtube Thumbnail> 
+        <img src="${result.snippet.thumbnails.medium.url}" alt="A youtube Thumbnail"> 
     </div>`
 
 }
