@@ -47,5 +47,3 @@ function watchSubmit() {
 
 $(watchSubmit);
 
-$(watchSubmit);
-
