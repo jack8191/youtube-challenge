@@ -17,6 +17,7 @@ function getDataFromApi(searchTerm, callback) {
 }
 
 
+//Spit result into HTML
 function renderResult(result) {
     return `
     <div class="js-search-results">
