@@ -17,11 +17,12 @@ function getDataFromApi(searchTerm, callback) {
 }
 
 
-//Spit result into HTML
 function renderResult(result) {
     return `
     <div class="js-search-results">
+        <a href="https://www.youtube.com/watch?v=${result.id.videoId}">
         <img src="${result.snippet.thumbnails.medium.url}" alt="A youtube Thumbnail"> 
+        </a>
     </div>`
 
 }
