@@ -23,9 +23,10 @@ function getDataFromApi(searchTerm, callback) {
 function renderResult(result) {
     return `
     <div class="js-search-results">
-        <img src="${result}"> 
-    </div>
-    `;
+
+        <img src="${result.snippet.thumbnails.medium.url}" alt="A youtube Thumbnail> 
+       
+    </div>`
 
 }
 
@@ -47,6 +48,8 @@ function watchSubmit() {
       });
 
 }
+
+$(watchSubmit);
 
 $(watchSubmit);
 
